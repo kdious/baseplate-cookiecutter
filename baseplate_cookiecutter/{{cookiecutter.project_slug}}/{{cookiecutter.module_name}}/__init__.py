@@ -97,7 +97,7 @@ def make_wsgi_app(app_config):
 {% endif -%}
 {%- if cookiecutter.integrations.events %}
     baseplate.add_to_context("events_production", EventQueue("production"))
-    baseplate.add_to_context("events_test", EventQueue("test"))
+    baseplate.add_to_context("events_v2", EventQueue("v2", event_serializer=serialize_v2_event))
 {% endif -%}
 {%- if cookiecutter.integrations.hvac %}
     hvac_factory = hvac_factory_from_config(app_config, secrets)

@@ -28,7 +28,7 @@ class events {
     ],
   }
 
-  events::consumer { 'test':
+  events::consumer { 'v2':
     require => [
       Exec['reload sysctls'],
       Package['python-baseplate'],

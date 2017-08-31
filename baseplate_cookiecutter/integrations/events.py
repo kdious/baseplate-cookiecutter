@@ -15,7 +15,7 @@ class EventsIntegration(Integration):
     variables = {
         "imports": {
             "external": [
-                "from baseplate.events import Event, EventQueue, serialize_v2_event",
+                "from baseplate.events import EventQueue, serialize_v2_event",
             ],
         },
 

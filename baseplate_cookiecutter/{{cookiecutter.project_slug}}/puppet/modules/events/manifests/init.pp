@@ -21,13 +21,6 @@ class events {
     mode   => '0644',
   }
 
-  events::consumer { 'production':
-    require => [
-      Exec['reload sysctls'],
-      Package['python-baseplate'],
-    ],
-  }
-
   events::consumer { 'v2':
     require => [
       Exec['reload sysctls'],
